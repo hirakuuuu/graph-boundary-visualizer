@@ -81,9 +81,9 @@ function App() {
                 borderRadius: 50,
                 backgroundColor:
                   boundary[i][j] === 1
-                    ? "#93c9ff"
+                    ? "#2134F0"
                     : v === 1
-                      ? "#ff93c9"
+                      ? "#E72F2F"
                       : "white",
                 border: "1px solid black",
               }}
