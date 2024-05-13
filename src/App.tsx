@@ -80,7 +80,11 @@ function App() {
                 margin: 2,
                 borderRadius: 50,
                 backgroundColor:
-                  boundary[i][j] === 1 ? "blue" : v === 1 ? "red" : "white",
+                  boundary[i][j] === 1
+                    ? "#93c9ff"
+                    : v === 1
+                      ? "#ff93c9"
+                      : "white",
                 border: "1px solid black",
               }}
               onClick={() => handleClick(i, j)}
