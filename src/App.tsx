@@ -32,6 +32,12 @@ const get_boundary = (graph: number[][]) => {
   return list;
 };
 
+const sum_boundary = (boundary: number[][]) => {
+  return boundary.reduce((acc, row) => {
+    return acc + row.reduce((acc, v) => acc + v, 0);
+  }, 0);
+};
+
 function App() {
   const [n, setN] = useState(5);
   const [graph, setGraph] = useState(init_graph(n));
@@ -61,6 +67,8 @@ function App() {
         <div>n = {n}</div>
         <button onClick={() => handleResize(1)}>+</button>
       </div>
+      <div>boundary count: {sum_boundary(boundary)}</div>
+
       {graph.map((row, i) => (
         <div key={`row-${i}`} style={{ display: "flex" }}>
           {row.map((v: number, j: number) => (
