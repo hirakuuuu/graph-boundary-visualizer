@@ -9,7 +9,7 @@ const init_graph = (n: number) => {
   return list;
 };
 
-const get_boundary = (graph: Array) => {
+const get_boundary = (graph: number[][]) => {
   const n = graph.length;
   const list = new Array(n).fill([]);
   for (let i = 0; i < n; i++) {
